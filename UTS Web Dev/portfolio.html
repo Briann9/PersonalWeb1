@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>My Personal Web/Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+          <i class='bx bx-ghost icon'></i>
+            <div class="logo_name">Briaan</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+              <i class='bx bx-search' ></i>
+             <input type="text" placeholder="Search...">
+             <span class="tooltip">Search</span>
+          </li>
+          <li>
+            <a href="home.html">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Home</span>
+            </a>
+             <span class="tooltip">Home</span>
+          </li>
+          <li>
+           <a href="about.html">
+             <i class='bx bx-user' ></i>
+             <span class="links_name">About Me</span>
+           </a>
+           <span class="tooltip">About Me</span>
+         </li>
+         <li>
+           <a href="portfolio.html">
+             <i class='bx bx-chat' ></i>
+             <span class="links_name">Portfolio</span>
+           </a>
+           <span class="tooltip">Portfolio</span>
+         </li>
+         <li>
+           <a href="contact.html">
+             <i class='bx bx-pie-chart-alt-2' ></i>
+             <span class="links_name">Contact</span>
+           </a>
+           <span class="tooltip">Contact</span>
+         </li>
+         <li class="profile">
+             <div class="profile-details">
+               <img src="images/formal.jpeg" alt="profileImg">
+               <div class="name_job">
+                 <div class="name">Briaan Putrantio</div>
+                 <div class="job">University Student</div>
+               </div>
+             </div>
+             <i class='bx bx-transfer-alt' id="log_out" ></i>
+         </li>
+        </ul>
+      </div>
+
+      <section class="portfolio-section">
+          <div class="text">Portfolio</div>
+          <div class="portfolio-content">
+            <div id="portfolio"></div>
+        <div class="content_box">
+            <h2>My Portfolio</h2>
+            <p>There is some of my portfolio.</p>
+            <div id="gallery">
+                <ul>
+                    <li>
+                        <img class="img" src="images/Portfolio1.jpg" alt="" /><img class="img" src="images/portfolio2.jpg" alt="" /><img class="img" src="images/portfolio3.jpg" alt="" />
+                    </li>
+                    <li >
+                        <img class="img" src="images/portfolio4.jpg" alt="" /><img class="img" src="images/Portfolio5.jpg" alt="" /><img class="img" src="images/Portfolio6.jpg" alt="" />
+                  	</li>
+                    
+                </ul>
+                
+                <div class="cleaner"></div>
+            </div>
+
+    
+          </div>
+
+      </section>
+
+      <div id="footer">
+        Copyright © 2021 <a href="#">Briaan Putrantio</a> 
+      </div>
+
+      <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+    
+      closeBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("open");
+        menuBtnChange();//calling the function(optional)
+      });
+    
+      searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+    
+      // following are the code to change sidebar button(optional)
+      function menuBtnChange() {
+       if(sidebar.classList.contains("open")){
+         closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+       }else {
+         closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+       }
+      }
+      </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>My Personal Web/Contact</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css%22%3E
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bx-ghost icon'></i>
+            <div class="logo_name">Briaan</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+              <i class='bx bx-search' ></i>
+             <input type="text" placeholder="Search...">
+             <span class="tooltip">Search</span>
+          </li>
+          <li>
+            <a href="home.html">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Home</span>
+            </a>
+             <span class="tooltip">Home</span>
+          </li>
+          <li>
+           <a href="about.html">
+             <i class='bx bx-user' ></i>
+             <span class="links_name">About Me</span>
+           </a>
+           <span class="tooltip">About Me</span>
+         </li>
+         <li>
+           <a href="portfolio.html">
+             <i class='bx bx-chat' ></i>
+             <span class="links_name">Portfolio</span>
+           </a>
+           <span class="tooltip">Portfolio</span>
+         </li>
+         <li>
+           <a href="contact.html">
+             <i class='bx bx-pie-chart-alt-2' ></i>
+             <span class="links_name">Contact</span>
+           </a>
+           <span class="tooltip">Contact</span>
+         </li>
+         <li class="profile">
+             <div class="profile-details">
+               <img src="images/formal.jpeg" alt="profileImg">
+               <div class="name_job">
+                 <div class="name">Briaan Putrantio</div>
+                 <div class="job">University Student</div>
+               </div>
+             </div>
+             <i class='bx bx-transfer-alt' id="log_out" ></i>
+         </li>
+        </ul>
+      </div>
+
+      <section class="contact-section">
+          <div class="text">My Contact</div>
+          <div class="contact-content">
+            <div class="pict">
+                <a href="https://www.google.com/maps/place/Kota+Surakarta,+Jawa+Tengah/@-7.5592076,110.7840138,13z/data=!3m1!4b1!4m9!1m2!2m1!1ssurakarta!3m5!1s0x2e7a16855db09efb:0xa6c2dbfdf275a4f9!8m2!3d-7.5695177!4d110.8250266!15sCglzdXJha2FydGGSAQppZF9yZWdlbmN5"><img class="foto" src="images/map.jpg" alt="fotomap"></a>
+            </div>
+
+              <div class="contact-text">
+                <h1>You Can reach me Here</h1>
+                <p>Address : Slamet Riyadi Street, Surakarta, Central Java. </p>
+                <p>Telp : 0819-9916-8999.</p>
+                <p>Email : bputrantio@student.ciputra.ac.id</p><br>
+                <p></p>
+                
+                <div class="social-media">
+                  <h1>My Social Media</h1>
+                  <div class="social-buttons">
+                    <a href="https://line.me/ti/p/~briaan.p09">
+                      <img src="images/line.png" alt="" width="5%">
+                    </a>
+                    <a href="https://www.instagram.com/brian_p09/">
+                      <img src="images/instagram.png" alt="" width="5%">
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=6281335468577">
+                      <img src="images/whatsapp.png" alt="" width="5%">
+                    </a>
+                    <a href="https://www.tiktok.com/@briaan.putrantio?lang=id-ID&is_copy_url=1&is_from_webapp=v1">
+                      <img src="images/tiktok.png" alt="" width="5%">
+                    </a>
+                  </div>
+
+            </div>
+
+          </div>
+
+      </section>
+
+      <div id="footer">
+        Copyright © 2021 <a href="#">Briaan Putrantio</a> 
+      </div>
+
+      <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+    
+      closeBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("open");
+        menuBtnChange();//panggil fungsi
+      });
+    
+      searchBtn.addEventListener("click", ()=>{ // side terbuka ketika dipencet
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //panggil fungsi
+      });
+    
+      // code buat ganti icon sidebar
+      function menuBtnChange() {
+       if(sidebar.classList.contains("open")){
+         closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//ganti icon class
+       }else {
+         closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//ganti icon class
+       }
+      }
+      </script>
+</body>
+</html>
